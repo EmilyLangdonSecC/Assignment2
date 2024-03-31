@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Hot Rockin' Records</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#">
+                <i class="fa-solid fa-compact-disc"></i>
+            </a>
+            <div class="dropdown-menu">
+                <span class="material-symbols-outlined dropdown inactive">
+                    menu
+                </span>
+                <div class="hidden">
+                    <a href="#" class="page">Home</a>
+                    <a href="#" class="page">About Us</a>
+                    <a href="#" class="page">Store</a>
+                    <a href="#" class="page">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="info">
+            <h1>Hot Rockin' Records</h1>
+            <h2>The greatest selection of rock and metal LPs in the GTA</h2>
+            <a class="browse-btn" href="#">Browse Our Selection</a>
+        </div>
+    </main>
+    <footer>
+        Copyright © 2024 Hot Rockin' Records. All rights reserved.
+    </footer>
+    <script>
+        $(document).on('click', '.inactive', function (event) {
+            $(this).removeClass('inactive').addClass('active');
+            $(".hidden").removeClass('hidden').addClass('shown');
+        })
+        $(document).on('click', '.active', function (event) {
+            $(this).removeClass('active').addClass('inactive');
+            $(".shown").removeClass('shown').addClass('hidden');
+        })
+        $(".fa-solid").hover(
+            function () {
+                $(this).removeClass('cursor-off').addClass('cursor-on');
+            },
+            function () {
+                $(this).removeClass('cursor-on').addClass('cursor-off');
+            }
+        );
+    </script>
+</body>
+
+</html>
